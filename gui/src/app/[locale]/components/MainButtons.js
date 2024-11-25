@@ -1,17 +1,21 @@
 import styles from "./Main.module.css";
+import { useTranslations } from 'next-intl';
 
-export default function MainButtons() {
+
+export default function MainButtons( ) {
+  const t = useTranslations("MainButtons");
+
   return (
     <div className={styles.hrefsButtons}>
       <div className={styles.ctas}>
         <a href="https://main.datastore.bam.de/" className={styles.primary} target="_blank" rel="noopener noreferrer">
-          Main instance of the Data Store
+          {t('mainInstance')}
         </a>
         <a href="https://datastore.bam.de/en/home" className={styles.primary} target="_blank" rel="noopener noreferrer">
-          Documentation
+          {t('wiki')}
         </a>
-        <a href="#" className={styles.primary} target="_blank" rel="noopener noreferrer">
-          Masterdata Tools
+        <a href="/en" className={styles.primary} target="_blank" rel="noopener noreferrer">
+          {t('masterdataTools')}
         </a>
       </div>
     </div>

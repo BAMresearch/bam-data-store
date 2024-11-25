@@ -27,9 +27,8 @@ maintainers = [
 license = { file = "LICENSE" }
 dependencies = [
   "pybis",
-  "pandas",
-  "openpyxl",
-  "click",
+  "fastapi",
+  "uvicorn",
 ]
 
 [project.urls]

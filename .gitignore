@@ -168,3 +168,41 @@ cython_debug/
 
 # Ruff
 .ruff_cache
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+gui/node_modules
+gui/.pnp
+gui/.pnp.*
+gui/.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+gui/coverage
+
+# next.js
+gui/.next/
+gui/out/
+
+# production
+gui/build
+
+# misc
+gui/.DS_Store
+gui/*.pem
+
+# debug
+gui/npm-debug.log*
+gui/yarn-debug.log*
+gui/yarn-error.log*
+
+# vercel
+gui/.vercel
+
+# typescript
+gui/*.tsbuildinfo
+gui/next-env.d.ts

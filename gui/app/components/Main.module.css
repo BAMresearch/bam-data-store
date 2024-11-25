@@ -1,0 +1,106 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-row-start: 2;
+}
+
+.main ol {
+    font-family: var(--font-klavika-light);
+    padding-left: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    list-style-position: inside;
+}
+
+.main li:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+.main code {
+    font-family: var(--font-geist-mono);
+    color: var(--code-color);
+    background: var(--code-color-background);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.ctas {
+    display: flex;
+    gap: 16px;
+}
+
+.ctas a {
+    appearance: none;
+    border-radius: 128px;
+    height: 48px;
+    padding: 0 20px;
+    border: none;
+    border: 1px solid transparent;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      border-color 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+a.primary {
+    background: var(--foreground);
+    color: var(--background);
+    gap: 8px;
+}
+
+a.secondary {
+    background: var(--background);
+    color: var(--foreground);
+    border-color: var(--foreground);
+    min-width: 180px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    a.primary:hover {
+      background: var(--button-hover);
+      border-color: transparent;
+      color: var(--button-hover-text-color);
+    }
+
+    a.secondary:hover {
+      background: var(--button-hover);
+      border-color: transparent;
+      color: var(--button-hover-text-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+      align-items: center;
+    }
+
+    .main ol {
+      text-align: center;
+    }
+
+    .ctas {
+      flex-direction: column;
+    }
+
+    .ctas a {
+      font-size: 14px;
+      height: 40px;
+      padding: 0 16px;
+    }
+
+    a.secondary {
+      min-width: auto;
+    }
+}

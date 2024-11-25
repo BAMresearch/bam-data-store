@@ -1,3 +1,5 @@
+
+import { ThemeProvider } from "./components/context/ThemeContext";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -26,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${klavikaMedium.variable} ${klavikaLight.variable} ${geistMono.variable}`}>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

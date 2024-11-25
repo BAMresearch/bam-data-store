@@ -58,7 +58,31 @@ If some issues are not possible to fix automatically, you will need to visit the
 
 ### Run the local website
 
-**Under construction!**
+You need to have _Node.js_ installed in your machine. Go to the [installation website](https://nodejs.org/en/download/package-manager) and follow the instructions there to install Node.
+
+Then, go to the `gui/` directory and install the dependencies:
+```sh
+npm install
+```
+
+Run the server:
+```sh
+npm run dev
+```
+
+This will produce an output that looks like:
+```sh
+> gui@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.0.3
+   - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.5s
+```
+
+Simply click on `http://localhost:3000` to launch the local server and develop the web.
 
 <!-- ### Debugging
 

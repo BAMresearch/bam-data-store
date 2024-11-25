@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logoBox {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.contactBox {
+    display: flex;
+    align-items: center;
+}
+
+.contact {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.contact:hover {
+    text-decoration: underline;
+}
+
+.themeToggle {
+    background: var(--foreground);
+    color: var(--background);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+.themeToggle:hover {
+    background: var(--background);
+    color: var(--foreground);
+}

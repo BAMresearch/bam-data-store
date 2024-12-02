@@ -90,8 +90,9 @@ class ObjectTypeDefinitions(MasterdataDefinitions):
     @model_validator(mode='after')
     @classmethod
     def model_validator_after_init(cls, data: Any) -> Any:
+        # TODO fix this with more logic
         if data.auto_generated_codes and data.code:
-            data.generated_code_prefix = data.code[:4]
+            data.generated_code_prefix = data.code[:3]
         return data
 
     def model_renormalize(self) -> None:

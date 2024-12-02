@@ -1,6 +1,6 @@
 from typing import ClassVar
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from bam_data_store.definitions import (
     MasterdataDefinitions,
@@ -50,6 +50,20 @@ class Chemical(ObjectType):
         generated_code_prefix='CHEM',
         auto_generated_codes=False,
     )
+
+
+class Instrument(ObjectType):
+    sensor_name: str = Field(..., description="""...""")
+
+    prop2: str = Field('default', description="""...""")
+
+    prop3: str = Field(description="""...""")
+
+    chemical: list[Chemical] = Field(description="""...""")
+
+
+class Camera(Instrument):
+    pass
 
 
 chemical = Chemical()

@@ -19,6 +19,9 @@
   "python.testing.pytestPath": "pytest",
   "python.testing.pytestArgs": ["tests"],
   "python.testing.unittestEnabled": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.ruff": "always"
+  },
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.formatOnSave": true,
   "launch": {

@@ -2,7 +2,7 @@ from decouple import config as environ
 from pybis import Openbis
 
 
-def openbis_login():
+def openbis_login() -> tuple[Openbis, str]:
     o = Openbis(url=environ('OPENBIS_HOST'))
     # * In case of self-signed certificates
     # o = Openbis(url=environ("OPENBIS_HOST"), verify_certificates=False)

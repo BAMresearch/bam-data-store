@@ -4,6 +4,22 @@ from typing import Any, Optional
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
+# TODO check the other data types
+DATA_TYPE_MAPPING: dict[str, type] = {
+    'BOOLEAN': bool,
+    # 'CONTROLLEDVOCABULARY': ,
+    # 'DATE': ,
+    'HYPERLINK': str,
+    'INTEGER': int,
+    # 'MATERIAL': ,
+    'MULTILINE_VARCHAR': str,
+    # 'OBJECT': ,
+    'REAL': float,
+    # 'TIMESTAMP': ,
+    'VARCHAR': str,
+    # 'XML': ,
+}
+
 
 class DataType(str, Enum):
     BOOLEAN = 'BOOLEAN'
@@ -57,7 +73,7 @@ class EntityDef(BaseModel):
     @field_validator('code')
     @classmethod
     def validate_code(cls, value: str) -> str:
-        if not value or not re.match(r'^[A-Z_]+$', value):
+        if not value or not re.match(r'^[A-Z_\$\.]+$', value):
             raise ValueError('`code` must be uppercase and separated by underscores')
         return value
 

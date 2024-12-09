@@ -65,7 +65,7 @@ class GMAWTorch(WeldingEquipment):
     torch_type = PropertyTypeAssignment(
         version=1,
         code='WELDING.TORCH_TYPE',
-        data_type='CONTROLLED_VOCABULARY',
+        data_type='CONTROLLEDVOCABULARY',
         vocabulary_code='WELDING.GMAW_TORCH_TYPE',  # ? use only the class name?
         property_label='Type',
         description="""

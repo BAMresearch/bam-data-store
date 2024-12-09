@@ -23,6 +23,7 @@ class BaseEntity(BaseModel):
         Returns:
             str: The JSON representation of the model.
         """
+        # * `model_dump_json()` from pydantic does not store the `defs` section of each entity.
         data = self.model_dump()
 
         attr_value = getattr(self, 'defs')
@@ -64,7 +65,7 @@ class VocabularyType(BaseEntity):
         return data
 
 
-class ObjectType(BaseModel):
+class ObjectType(BaseEntity):
     model_config = ConfigDict(ignored_types=(ObjectTypeDef, PropertyTypeAssignment))
 
     properties: list[PropertyTypeAssignment] = Field(

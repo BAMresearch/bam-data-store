@@ -97,7 +97,7 @@ class TestEntityDef:
             ('', False),
         ],
     )
-    def test_code_validation(self, code: str, is_valid: bool):
+    def test_validate_code(self, code: str, is_valid: bool):
         """Test the code validator."""
         if is_valid:
             entity = EntityDef(version=1, code=code, description='Valid description')
@@ -105,6 +105,13 @@ class TestEntityDef:
         else:
             with pytest.raises(ValueError):
                 EntityDef(version=1, code=code, description='Valid description')
+
+    def test_strip_description(self):
+        """Test the `strip_description` method."""
+        entity = EntityDef(
+            version=1, code='EXPERIMENTAL_STEP', description='  Valid description  '
+        )
+        assert entity.description == 'Valid description'
 
 
 class TestBaseObjectTypeDef:

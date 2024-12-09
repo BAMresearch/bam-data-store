@@ -95,6 +95,11 @@ class EntityDef(BaseModel):
             )
         return value
 
+    @field_validator('description')
+    @classmethod
+    def strip_description(cls, value: str) -> str:
+        return value.strip()
+
 
 class BaseObjectTypeDef(EntityDef):
     """

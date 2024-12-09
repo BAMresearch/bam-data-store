@@ -19,7 +19,7 @@ class BaseEntity(BaseModel):
 
     def to_json(self, indent: Optional[int] = None) -> str:
         """
-        Returns the JSON representation of the model storing the data `defs` and the property or
+        Returns the model as a string in JSON format storing the data `defs` and the property or
         vocabulary term assignments.
 
         Args:
@@ -38,6 +38,17 @@ class BaseEntity(BaseModel):
             data['defs'] = attr_value
 
         return json.dumps(data, indent=indent)
+
+    def to_dict(self) -> dict:
+        """
+        Returns the model as a dictionary storing the data `defs` and the property or vocabulary term
+        assignments.
+
+        Returns:
+            dict: The dictionary representation of the model.
+        """
+        dump_json = self.to_json()
+        return json.loads(dump_json)
 
 
 class ObjectType(BaseEntity):

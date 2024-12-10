@@ -127,3 +127,11 @@ class VocabularyType(BaseEntity):
                 data.terms.append(attr)
 
         return data
+
+
+class PropertyType(BaseEntity):
+    pass
+
+
+class CollectionType(BaseEntity):
+    pass

@@ -104,6 +104,14 @@
     background-color: rgba(0,0,0,.13);
 }
 
+.md-source {
+    color: var(--bam-rot-dark);
+}
+
+.md-source:hover {
+    color: var(--bam-rot);
+}
+
 .md-main {
     background-color: var(--bam-weiss);
 }
@@ -133,7 +141,7 @@
 
 .home-grid h3 {
     margin-top: 0;
-    font-weight: 700;
+    font-family: var(--titles-font)
 }
 
 .md-nav {
@@ -147,6 +155,10 @@
 .md-nav--primary .md-nav__title {
     background: var(--bam-weiss);
     box-shadow: 0 0 0 0;
+}
+
+.md-main__inner {
+    margin-bottom: 1rem
 }
 
 .md-footer {

@@ -28,11 +28,6 @@ The **Tutorials** are designed to guide you through the general and basic unders
 
 The **How-to guides** provide step-by-step instructions for a wide range of tasks. These are oriented for a practical application so you can use them as a fast entry point when searching for specific information.
 
-- Using pyBIS
-- other titles here...
-
-ADD BUTTON HERE TO OPEN HOW-TO GUIDES
-
 
 </div>
 

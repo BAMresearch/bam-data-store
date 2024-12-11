@@ -1,32 +1,54 @@
 site_name: BAM Data Store Wiki
 site_description: Documentation page for the BAM Data Store.
 site_author: BAM Data Store
-repo_url: https://git.bam.de/bam-data-store/bam-data-store
+repo_url: https://github.com/BAMresearch/bam-data-store
+nav:
+  - Home: index.md
+  - Tutorial:
+    - Create Masterdata: tutorials/create-masterdata.md
+    - Basic pyBIS usage: tutorials/pybis.md
+  - How-to guides:
+    - Overview: howtos/overview.md
+    - pyBIS:
+      - Initial setup: howtos/pybis/setup.md
+      - Create spaces: howtos/pybis/spaces.md
+      - Create projects: howtos/pybis/projects.md
+      - Create collections: howtos/pybis/collections.md
+      - Create objects: howtos/pybis/objects.md
+      - Modify objects properties: howtos/pybis/objects_props.md
+      - Define parent-child relationships: howtos/pybis/parent_child.md
+      - Create datasets: howtos/pybis/datasets.md
+      - Searches and filters: howtos/pybis/searches.md
+  - Explanations:
+    - Data Store: explanations/data-store.md
+    - OpenBIS : explanations/openbis.md
+    - pyBIS : explanations/pybis.md
+  - References:
+    - Collection: references/collection.md
+    - Controlled Vocabulary: references/controlled-vocabulary.md
+    - Dataset: references/dataset.md
 theme:
   name: material
   palette:
-    # primary: "#00aff0"
-    # accent: "#d2001e"
-    - scheme: default
+    primary: custom
+    accent: custom
+    # - scheme: default
     # - media: "(prefers-color-scheme: light)"
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - scheme: slate
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Switch to light mode
+    # - scheme: slate
     # - media: "(prefers-color-scheme: dark)"
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+      # toggle:
+      #   icon: material/weather-night
+      #   name: Switch to dark mode
   logo: assets/datastore-logo.png
-  favicon: assets/datastore-logo.png
+  favicon: assets/datastore-logo-white.png
   features:
     - navigation.path
     - navigation.footer
     - navigation.top
     - content.code.copy
-  # font:
-  #   text: "Klavika"
-  # font: false
 plugins:
   - search
 markdown_extensions:
@@ -47,6 +69,8 @@ markdown_extensions:
       toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
-# extra_css:
-#   - stylesheets/extra.css
-#   - https://fonts.cdnfonts.com/css/noto-mono
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js'
+  - 'https://unpkg.com/cytoscape@3.19.1/dist/cytoscape.min.js'

@@ -24,6 +24,7 @@ def entities_to_json(
         logger (BoundLoggerLazyProxy): The logger to log messages.
     """
     module = import_module(module_path=module_path)
+    # export to specific subfolders for each type of entity (each module)
     module_export_dir = os.path.join(
         export_dir, os.path.basename(module_path).replace('.py', '')
     )

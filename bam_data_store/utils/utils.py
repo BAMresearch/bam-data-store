@@ -2,20 +2,18 @@ import glob
 import importlib.util
 import os
 import shutil
-from typing import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     from structlog._config import BoundLoggerLazyProxy
 
 
-def delete_and_create_dir(
-    directory_path: Optional[str], logger: 'BoundLoggerLazyProxy'
-) -> None:
+def delete_and_create_dir(directory_path: str, logger: 'BoundLoggerLazyProxy') -> None:
     """
     Deletes the directory at `directory_path` and creates a new one in the same path.
 
     Args:
-        directory_path (Optional[str]): The directory path to delete and create the folder.
+        directory_path (str): The directory path to delete and create the folder.
         logger (BoundLoggerLazyProxy): The logger to log messages.
     """
     if not directory_path:
@@ -25,18 +23,24 @@ def delete_and_create_dir(
         return None
 
     if os.path.exists(directory_path):
-        shutil.rmtree(directory_path)
+        try:
+            shutil.rmtree(directory_path)  # ! careful with this line
+        except PermissionError:
+            logger.error(
+                f'Permission denied to delete the directory at {directory_path}.'
+            )
+            return None
     os.makedirs(directory_path)
 
 
 def listdir_py_modules(
-    directory_path: Optional[str], logger: 'BoundLoggerLazyProxy'
+    directory_path: str, logger: 'BoundLoggerLazyProxy'
 ) -> list[str]:
     """
     Recursively goes through the `directory_path` and returns a list of all .py files that do not start with '_'.
 
     Args:
-        directory_path (Optional[str]): The directory path to search through.
+        directory_path (str): The directory path to search through.
         logger (BoundLoggerLazyProxy): The logger to log messages.
 
     Returns:

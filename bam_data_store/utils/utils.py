@@ -7,7 +7,9 @@ if TYPE_CHECKING:
     from structlog._config import BoundLoggerLazyProxy
 
 
-def delete_and_create_dir(directory_path: Optional[str], logger: 'BoundLoggerLazyProxy') -> None:
+def delete_and_create_dir(
+    directory_path: Optional[str], logger: 'BoundLoggerLazyProxy'
+) -> None:
     """
     Deletes the directory at `directory_path` and creates a new one in the same path.
 
@@ -26,7 +28,9 @@ def delete_and_create_dir(directory_path: Optional[str], logger: 'BoundLoggerLaz
     os.makedirs(directory_path)
 
 
-def listdir_py_modules(directory_path: Optional[str], logger: 'BoundLoggerLazyProxy') -> list[str]:
+def listdir_py_modules(
+    directory_path: Optional[str], logger: 'BoundLoggerLazyProxy'
+) -> list[str]:
     """
     Recursively goes through the `directory_path` and returns a list of all .py files that do not start with '_'.
 

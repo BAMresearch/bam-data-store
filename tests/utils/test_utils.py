@@ -87,7 +87,7 @@ def test_import_module():
         'shutil',
     ]
     assert [f[0] for f in inspect.getmembers(module, inspect.isclass)] == []
-    assert [f[0] for f in inspect.getmembers(module, inspect.isclass)] == [
+    assert [f[0] for f in inspect.getmembers(module, inspect.isfunction)] == [
         'delete_and_create_dir',
         'import_module',
         'listdir_py_modules',

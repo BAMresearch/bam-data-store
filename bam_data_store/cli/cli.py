@@ -27,7 +27,7 @@ def export_entities_to_json():
 
     # Process each module
     for module_path in py_modules:
-        entities_to_json(module_path=module_path, export_dir=export_dir)
+        entities_to_json(module_path=module_path, export_dir=export_dir, logger=logger)
 
     click.echo(f'All entity artifacts have been generated and saved to {export_dir}')
 

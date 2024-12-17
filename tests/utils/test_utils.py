@@ -86,6 +86,7 @@ def test_import_module():
         'importlib',
         'os',
         'shutil',
+        'sys',
     ]
     assert [f[0] for f in inspect.getmembers(module, inspect.isclass)] == []
     assert [f[0] for f in inspect.getmembers(module, inspect.isfunction)] == [

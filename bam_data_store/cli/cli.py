@@ -12,12 +12,10 @@ def cli():
     pass
 
 
-@cli.command(
-    help='Export entities to JSON files to the `./bam_data_store/datamodel/artifacts/` subfolder.'
-)
+@cli.command(help='Export entities to JSON files to the `./artifacts/` folder.')
 def export_entities_to_json():
     datamodel_dir = os.path.join('.', 'bam_data_store', 'datamodel')
-    export_dir = os.path.join('.', 'bam_data_store', 'datamodel', 'artifacts')
+    export_dir = os.path.join('.', 'artifacts')
 
     # Delete and create the export directory
     delete_and_create_dir(directory_path=export_dir, logger=logger)

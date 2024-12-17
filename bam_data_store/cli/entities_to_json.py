@@ -1,4 +1,5 @@
 import inspect
+import json
 import os
 from typing import TYPE_CHECKING
 
@@ -46,3 +47,18 @@ def entities_to_json(
             click.echo(f'Saved JSON for class {name} to {output_file}')
         except Exception as err:
             click.echo(f'Failed to process class {name} in {module_path}: {err}')
+
+    # Special case of `PropertyTypeDef` in `property_types.py`
+    if 'property_types.py' in module_path:
+        for name, obj in inspect.getmembers(module):
+            if name.startswith('_') or name == 'PropertyTypeDef':
+                continue
+            try:
+                json_data = json.dumps(obj.model_dump(), indent=2)
+                output_file = os.path.join(module_export_dir, f'{obj.code}.json')
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(json_data)
+
+                click.echo(f'Saved JSON for class {name} to {output_file}')
+            except Exception as err:
+                click.echo(f'Failed to process class {name} in {module_path}: {err}')

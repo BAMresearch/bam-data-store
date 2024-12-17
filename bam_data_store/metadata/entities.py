@@ -5,6 +5,7 @@ from typing import Any, Optional
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from bam_data_store.metadata.definitions import (
+    CollectionTypeDef,
     ObjectTypeDef,
     PropertyTypeAssignment,
     VocabularyTerm,
@@ -50,10 +51,6 @@ class BaseEntity(BaseModel):
         """
         dump_json = self.to_json()
         return json.loads(dump_json)
-
-    @abstractmethod
-    def entity_type(self) -> str:
-        pass
 
 
 class ObjectType(BaseEntity):
@@ -148,9 +145,5 @@ class VocabularyType(BaseEntity):
         return 'VocabularyType'
 
 
-class PropertyType(BaseEntity):
-    pass
-
-
-class CollectionType(BaseEntity):
-    pass
+class CollectionType(ObjectType):
+    model_config = ConfigDict(ignored_types=(CollectionTypeDef, PropertyTypeAssignment))

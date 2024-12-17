@@ -1,7 +1,8 @@
 import glob
+import importlib.util
 import os
 import shutil
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 if TYPE_CHECKING:
     from structlog._config import BoundLoggerLazyProxy
@@ -55,3 +56,20 @@ def listdir_py_modules(
 
     # Filter out files that start with '_'
     return [f for f in files if not os.path.basename(f).startswith('_')]
+
+
+def import_module(module_path: str) -> Any:
+    """
+    Dynamically imports a module from the given file path.
+
+    Args:
+        module_path (str): Path to the Python module file.
+
+    Returns:
+        module: Imported module object.
+    """
+    module_name = os.path.splitext(os.path.basename(module_path))[0]
+    spec = importlib.util.spec_from_file_location(module_name, module_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module

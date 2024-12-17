@@ -1,4 +1,3 @@
-import importlib.util
 import inspect
 import os
 from typing import TYPE_CHECKING
@@ -8,24 +7,7 @@ if TYPE_CHECKING:
 
 import click
 
-from bam_data_store.utils import delete_and_create_dir
-
-
-def import_module(module_path: str):
-    """
-    Dynamically imports a module from the given file path.
-
-    Args:
-        module_path (str): Path to the Python module file.
-
-    Returns:
-        module: Imported module object.
-    """
-    module_name = os.path.splitext(os.path.basename(module_path))[0]
-    spec = importlib.util.spec_from_file_location(module_name, module_path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
+from bam_data_store.utils import delete_and_create_dir, import_module
 
 
 def entities_to_json(

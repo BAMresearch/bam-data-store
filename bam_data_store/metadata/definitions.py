@@ -100,6 +100,31 @@ class EntityDef(BaseModel):
     def strip_description(cls, value: str) -> str:
         return value.strip()
 
+    @property
+    def name(self) -> str:
+        return self.__class__.__name__
+
+    @property
+    def excel_name(self) -> str:
+        """
+        Returns the name of the entity in a format suitable for the openBIS Excel file.
+        """
+        name_map = {
+            'CollectionTypeDef': 'EXPERIMENT_TYPE',
+            'DataSetTypeDef': 'DATASET_TYPE',
+            'ObjectTypeDef': 'SAMPLE_TYPE',
+            'PropertyTypeDef': 'PROPERTY_TYPE',
+            'VocabularyTypeDef': 'VOCABULARY_TYPE',
+        }
+        return name_map.get(self.name)
+
+    @property
+    def excel_headers(self) -> list[str]:
+        """
+        Returns the headers for the entity in a format suitable for the openBIS Excel file.
+        """
+        return [k.capitalize().replace('_', ' ') for k in self.model_fields.keys()]
+
 
 class BaseObjectTypeDef(EntityDef):
     """

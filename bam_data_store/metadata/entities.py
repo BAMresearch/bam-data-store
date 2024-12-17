@@ -1,4 +1,5 @@
 import json
+from abc import abstractmethod
 from typing import Any, Optional
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
@@ -50,6 +51,10 @@ class BaseEntity(BaseModel):
         dump_json = self.to_json()
         return json.loads(dump_json)
 
+    @abstractmethod
+    def entity_type(self) -> str:
+        pass
+
 
 class ObjectType(BaseEntity):
     """
@@ -89,6 +94,13 @@ class ObjectType(BaseEntity):
 
         return data
 
+    @property
+    def entity_type(self) -> str:
+        """
+        Returns the entity type of the class as a string to speed up checks.
+        """
+        return 'ObjectType'
+
 
 class VocabularyType(BaseEntity):
     """
@@ -127,6 +139,13 @@ class VocabularyType(BaseEntity):
                 data.terms.append(attr)
 
         return data
+
+    @property
+    def entity_type(self) -> str:
+        """
+        Returns the entity type of the class as a string to speed up checks.
+        """
+        return 'VocabularyType'
 
 
 class PropertyType(BaseEntity):

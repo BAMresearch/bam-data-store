@@ -58,9 +58,14 @@ def entities_to_excel(
                 continue
             worksheet.append(obj_instance.properties[0].excel_headers)
             for prop in obj_instance.properties:
-                worksheet.append(
-                    getattr(prop, f_set) for f_set in prop.model_fields.keys()
-                )
+                row = []
+                for f_set in prop.model_fields.keys():
+                    if f_set == 'data_type':
+                        val = prop.data_type.value
+                    else:
+                        val = getattr(prop, f_set)
+                    row.append(val)
+                worksheet.append(row)
         # Terms assignment for VocabularyType
         elif obj_instance.entity_type == 'VocabularyType':
             if not obj_instance.terms:

@@ -70,7 +70,6 @@ def export_entities_to_excel():
             worksheet=ws,
             module_path=module_path,
             definitions_module=definitions_module,
-            logger=logger,
         )
     wb.save(masterdata_file)
 

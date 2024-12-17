@@ -2,13 +2,8 @@ import inspect
 import os
 from typing import TYPE_CHECKING, Any
 
-from openpyxl.styles import Font
-
 if TYPE_CHECKING:
     from openpyxl.worksheet.worksheet import Worksheet
-    from structlog._config import BoundLoggerLazyProxy
-
-import click
 
 from bam_data_store.utils import import_module
 
@@ -17,21 +12,21 @@ def entities_to_excel(
     worksheet: 'Worksheet',
     module_path: str,
     definitions_module: Any,
-    logger: 'BoundLoggerLazyProxy',
 ) -> None:
     """
-    Export entities to JSON files. The Python modules are imported using the function `import_module`,
+    Export entities to the Excel file. The Python modules are imported using the function `import_module`,
     and their contents are inspected (using `inspect`) to find the classes in the datamodel containing
-    `defs` and with a `to_json` method defined.
+    `defs` and with a `to_json` method defined. Each row is then appended to the `worksheet`.
 
     Args:
+        worksheet (Worksheet): The worksheet to append the entities.
         module_path (str): Path to the Python module file.
-        export_dir (str): Path to the directory where the JSON files will be saved.
-        logger (BoundLoggerLazyProxy): The logger to log messages.
+        definitions_module (Any): The module containing the definitions of the entities. This is used
+            to match the header definitions of the entities.
     """
     def_members = inspect.getmembers(definitions_module, inspect.isclass)
     module = import_module(module_path=module_path)
-    for name, obj in inspect.getmembers(module, inspect.isclass):
+    for _, obj in inspect.getmembers(module, inspect.isclass):
         # Ensure the class has the `to_json` method
         if not hasattr(obj, 'defs') or not callable(getattr(obj, 'to_json')):
             continue
@@ -75,5 +70,7 @@ def entities_to_excel(
                 worksheet.append(
                     getattr(term, f_set) for f_set in term.model_fields.keys()
                 )
+
+        # ? do the PropertyTypeDef need to be exported to Excel?
 
         worksheet.append([''])  # empty row after entity definitions

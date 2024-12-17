@@ -171,3 +171,7 @@ cython_debug/
 
 # static artifacts
 artifacts
+
+# pytest coverage
+pytest.xml
+pytest-coverage.txt

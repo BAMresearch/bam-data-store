@@ -44,6 +44,7 @@ dev = [
   "pytest-timeout",
   "pytest-cov",
   "python-decouple",
+  "structlog==24.4.0",
 ]
 jupy = [
   "jupyterlab",

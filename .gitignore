@@ -169,9 +169,9 @@ cython_debug/
 # Ruff
 .ruff_cache
 
-# static artifacts
-artifacts
-
 # pytest coverage
 pytest.xml
 pytest-coverage.txt
+
+# artifacts
+artifacts

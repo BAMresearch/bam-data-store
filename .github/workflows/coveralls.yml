@@ -30,7 +30,7 @@ jobs:
         uv pip install coveralls
     - name: Build coverage file
       run: |
-        pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=bam_data_store tests | tee pytest-coverage.txt
+        pytest --cov-config=.coveragerc --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=bam_data_store tests | tee pytest-coverage.txt
     - name: Pytest coverage comment
       uses: MishaKav/pytest-coverage-comment@main
       with:

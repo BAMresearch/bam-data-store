@@ -18,8 +18,11 @@ def cli():
     pass
 
 
-@cli.command(help='Export entities to JSON files to the `./artifacts/` folder.')
-def export_entities_to_json():
+@cli.command(
+    name='export_to_json',
+    help='Export entities to JSON files to the `./artifacts/` folder.',
+)
+def export_to_json():
     # Get the directories from the Python modules and the export directory for the static artifacts
     datamodel_dir = os.path.join('.', 'bam_masterdata', 'datamodel')
     export_dir = os.path.join('.', 'artifacts')
@@ -38,11 +41,12 @@ def export_entities_to_json():
 
 
 @cli.command(
+    name='export_to_excel',
     help="""
     Export entities to an Excel file in the path `./artifacts/masterdata.xlsx`.
     """,
 )
-def export_entities_to_excel():
+def export_to_excel():
     # Get the Python modules to process the datamodel
     datamodel_dir = os.path.join('.', 'bam_masterdata', 'datamodel')
     py_modules = listdir_py_modules(directory_path=datamodel_dir, logger=logger)

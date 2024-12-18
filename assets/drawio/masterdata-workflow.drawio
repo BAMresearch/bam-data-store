@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0" version="25.0.3">
+  <diagram name="Page-1" id="0Vyze75IJXNyw1NAYiIs">
+    <mxGraphModel dx="2218" dy="1980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-40" target="piQVccZ1z7M02Xxa8-p4-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-36" target="piQVccZ1z7M02Xxa8-p4-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-38" target="piQVccZ1z7M02Xxa8-p4-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-7" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="680" y="-145" width="500" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-6" value="&lt;ul style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;In Github&lt;/li&gt;&lt;li&gt;We provide:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;instructions in README&lt;/li&gt;&lt;li&gt;add same instructions to bam-data-store documentation&lt;/li&gt;&lt;li&gt;pyproject.toml&lt;/li&gt;&lt;li&gt;src/ and tests/ folder structure&lt;/li&gt;&lt;li&gt;a Python module per entity type&lt;/li&gt;&lt;li&gt;a pytest testing module per entity type&lt;/li&gt;&lt;li&gt;a masterdata.xlsx template&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Licensing?&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#002832;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="piQVccZ1z7M02Xxa8-p4-7">
+          <mxGeometry x="260" width="240" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-4" value="masterdata-template" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=24;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="piQVccZ1z7M02Xxa8-p4-7">
+          <mxGeometry y="115" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-9" target="piQVccZ1z7M02Xxa8-p4-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-17" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Klavika&quot;&gt;&lt;i&gt;Use this template&lt;br&gt;&lt;/i&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="piQVccZ1z7M02Xxa8-p4-13">
+          <mxGeometry x="-0.1178" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-9" value="bam-masterdata-&amp;lt;usecase1&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF0025;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=20;strokeColor=#002832;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="-30" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;dashed=1;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-12" target="piQVccZ1z7M02Xxa8-p4-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-22" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Klavika&quot;&gt;&lt;i&gt;Use this template&lt;br&gt;&lt;/i&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="piQVccZ1z7M02Xxa8-p4-20">
+          <mxGeometry x="-0.0509" y="-4" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-12" value="bam-masterdata-&amp;lt;usecaseX&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF0025;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=20;strokeColor=#002832;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="250" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-11" value="bam-masterdata-&amp;lt;usecase2&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF0025;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=20;strokeColor=#002832;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="65" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-11" target="piQVccZ1z7M02Xxa8-p4-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-21" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Klavika&quot;&gt;&lt;i&gt;Use this template&lt;br&gt;&lt;/i&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="piQVccZ1z7M02Xxa8-p4-19">
+          <mxGeometry x="-0.3613" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-30" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-60" y="182.5" width="570" height="355" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-1" value="&lt;font&gt;bam&lt;/font&gt;-data-store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=30;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="piQVccZ1z7M02Xxa8-p4-30">
+          <mxGeometry x="320" y="147.5" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-29" value="&lt;ul style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;In Github&lt;/li&gt;&lt;li&gt;Python:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;bam_data_store/definitions/ defines the basic classes to be used by the entities datamodel&lt;/li&gt;&lt;li&gt;bam_data_store/datamodel/ contains the native BAM Data Store model (the common and abstract classes)&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Licensing?&lt;/li&gt;&lt;li&gt;Contains:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;specific use-cases packages&lt;/li&gt;&lt;li&gt;JSONs for the full masterdata&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Integrated with openBIS instances (with a method to `push_to_openbis()`)&lt;br&gt;&lt;/li&gt;&lt;li&gt;Frontend:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;buttons to documentation, main instance, masterdata-checker&lt;br&gt;&lt;/li&gt;&lt;li&gt;visualization of masterdata entities (D3.js)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#002832;align=left;verticalAlign=top;fontSize=14;" vertex="1" parent="piQVccZ1z7M02Xxa8-p4-30">
+          <mxGeometry width="320" height="355" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-31" value="&lt;div&gt;openBIS&lt;/div&gt;&lt;div&gt;instance&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCD8DF;fontFamily=Klavika;fontColor=#002832;textShadow=0;fontSize=40;strokeColor=#002832;strokeWidth=3;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="370" y="660" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-5" target="piQVccZ1z7M02Xxa8-p4-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-1" target="piQVccZ1z7M02Xxa8-p4-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="390" as="sourcePoint" />
+            <mxPoint x="500" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-35" value="&lt;font face=&quot;Klavika&quot; style=&quot;font-size: 16px;&quot;&gt;push_to_openbis()&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="piQVccZ1z7M02Xxa8-p4-34">
+          <mxGeometry x="-0.0963" y="1" relative="1" as="geometry">
+            <mxPoint x="-39" y="-29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-5" value="masterdata-checker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=18;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="405" y="510" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-1" target="piQVccZ1z7M02Xxa8-p4-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="360" as="sourcePoint" />
+            <mxPoint x="785" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-36" value="masterdata-checker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=18;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="783.75" y="360" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-1" target="piQVccZ1z7M02Xxa8-p4-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="330" as="sourcePoint" />
+            <mxPoint x="520" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-38" value="masterdata-checker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=18;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="440" y="210" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="piQVccZ1z7M02Xxa8-p4-1" target="piQVccZ1z7M02Xxa8-p4-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="330" as="sourcePoint" />
+            <mxPoint x="305" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-40" value="masterdata-checker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=18;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="210" y="65" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-44" value="name" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#325463;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=20;strokeColor=#002832;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="-70" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-45" value="DataStore Github repository" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Klavika;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="-60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-47" value="Division-specific Github repository" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Klavika;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="10" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-48" value="name" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF0025;fontFamily=Klavika;fontColor=#FFFFFF;textShadow=0;fontSize=20;strokeColor=#002832;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-280" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-50" value="name" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCD8DF;fontFamily=Klavika;fontColor=#002832;textShadow=0;fontSize=20;strokeColor=#002832;strokeWidth=3;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-280" y="72.5" width="100" height="47.5" as="geometry" />
+        </mxCell>
+        <mxCell id="piQVccZ1z7M02Xxa8-p4-51" value="openBIS instance" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Klavika;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="81.25" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

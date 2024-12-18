@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "BAM Klavika-Light";
+    src: url("../assets/fonts/BAMKlavika-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BAM Klavika-LightItalic";
+    src: url("../assets/fonts/BAMKlavika-LightItalic.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BAM Klavika-Medium";
+    src: url("../assets/fonts/BAMKlavika-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BAM Klavika-MediumItalic";
+    src: url("../assets/fonts/BAMKlavika-MediumItalic.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --md-text-font: "BAM Klavika-Light";
+    --titles-font: "BAM Klavika-Medium";
+    --md-code-font: "Noto Mono";
+
+    /* BAM colors */
+    --bam-weiss: rgb(243, 243, 243);
+    --bam-weiss-dark: rgb(238, 241, 243);
+    --bam-schwarz-100: rgb(0, 40, 50);
+    --bam-schwarz-80: rgb(50, 84, 99);
+    --bam-schwarz-60: rgb(95, 123, 137);
+    --bam-schwarz-45: rgb(125, 149, 163);
+    --bam-schwarz-30: rgb(163, 184, 195);
+    --bam-schwarz-15: rgb(204, 216, 223);
+    --bam-rot: rgb(210, 0, 30);
+    --bam-rot-dark: rgb(180, 15, 30);
+    --bam-rot-darker: rgb(140, 20, 25);
+    --bam-rot-darkest: rgb(80, 25, 25);
+    --bam-blau: rgb(0, 175, 240);
+    --bam-blau-dark: rgb(0, 137, 186);
+    --bam-blau-darker: rgb(0, 117, 153);
+    --bam-blau-darkest: rgb(0, 85, 110);
+    --bam-grun: rgb(140, 180, 15);
+    --bam-grun-dark: rgb(130, 165, 50);
+    --bam-grun-darker: rgb(90, 140, 50);
+    --bam-grun-darkest: rgb(55, 120, 50);
+    --bam-gelb: rgb(255, 220, 0);
+    --bam-gelb-dark: rgb(250, 185, 0);
+    --bam-gelb-darker: rgb(230, 155, 0);
+    --bam-gelb-darkest: rgb(205, 125, 0);
+
+    /* Backgrounds, primaries, and secondaries */
+    --background-light: var(--bam-weiss);
+    --color-light: var(--bam-schwarz-100);
+    --background-dark: var(--bam-schwarz-100);
+    --color-dark: var(--bam-weiss);
+
+    --code-color-light: var(--bam-grun-darkest);
+    --code-background-light: rgb(204, 216, 223, 0.3);  /* similar to bam-schwarz-15 */
+    --code-color-dark: var(--bam-grun);
+    --code-background-dark: rgb(27, 72, 83, 0.3);
+
+    --grid-background-light: rgb(238, 229, 174, 0.5);
+
+    --md-primary-fg-color: var(--bam-rot-dark);  /* for hrefs */
+    --md-accent-fg-color: var(--bam-rot);  /* when hovering hrefs */
+    --md-primary-bg-color: var(--bam-rot);  /* for search icon */
+    --md-default-bg-color: var(--bam-weiss);
+}
+
+.md-header__button.md-logo :where(img,svg) {
+    width: 100%;
+    height: 30px;
+}
+
+.md-header, .md-header__inner {
+    background-color: var(--bam-weiss-dark);
+    color: var(--bam-schwarz-100);
+}
+
+.md-header--shadow {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, .12);
+    transition: box-shadow 200ms linear;
+}
+
+.md-header__inner {
+    height: 72px;
+}
+
+.md-header__topic {
+    font-size: 24px;
+    font-family: var(--titles-font);
+}
+
+.md-search__form:hover {
+    background-color: rgba(0,0,0,.13);
+}
+
+.md-source {
+    color: var(--bam-rot-dark);
+}
+
+.md-source:hover {
+    color: var(--bam-rot);
+}
+
+.md-main {
+    background-color: var(--bam-weiss);
+}
+
+.md-content__inner, .md-typeset {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.md-typeset h1 {
+    color: var(--bam-schwarz-100);
+    font-family: var(--titles-font)
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+    row-gap: 24px;
+}
+
+.home-grid div {
+    border-radius: 16px;
+    padding: 24px;
+    background-color: var(--grid-background-light);
+}
+
+.home-grid h3 {
+    margin-top: 0;
+    font-family: var(--titles-font)
+}
+
+.md-nav {
+    font-size: 0.8rem;
+}
+
+.md-nav__title {
+    color: var(--bam-schwarz-60)
+}
+
+.md-nav--primary .md-nav__title {
+    background: var(--bam-weiss);
+    box-shadow: 0 0 0 0;
+}
+
+.md-main__inner {
+    margin-bottom: 1rem
+}
+
+.md-footer {
+    background-color: var(--bam-blau-darkest);
+}

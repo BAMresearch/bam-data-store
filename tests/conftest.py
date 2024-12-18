@@ -3,6 +3,7 @@ import os
 import pytest
 from pydantic import ConfigDict
 
+from bam_data_store.logger import log_storage
 from bam_data_store.metadata.definitions import (
     ObjectTypeDef,
     PropertyTypeAssignment,
@@ -20,6 +21,13 @@ if os.getenv('_PYTEST_RAISE', '0') != '0':
     @pytest.hookimpl(tryfirst=True)
     def pytest_internalerror(excinfo):
         raise excinfo.value
+
+
+@pytest.fixture(autouse=True)
+def cleared_log_storage():
+    """Fixture to clear the log storage before each test."""
+    log_storage.clear()
+    yield log_storage
 
 
 class MockedEntity(BaseEntity):

@@ -21,6 +21,10 @@
   "python.testing.unittestEnabled": false,
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.ruff": "always",
+    "source.fixAll.ruff": "always",
+  },
   "launch": {
     "version": "0.2.0",
     "configurations": [

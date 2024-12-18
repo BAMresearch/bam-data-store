@@ -112,7 +112,7 @@ class BaseObjectTypeDef(EntityDef):
         description="""
         Script written in Jython used to validate the object type.
         """,
-    )  # ? is this truly used?
+    )
 
 
 class CollectionTypeDef(BaseObjectTypeDef):
@@ -273,19 +273,17 @@ class PropertyTypeDef(EntityDef):
         """,
     )
 
-    # TODO add descriptions for `metadata`, `dynamic_script`, and `multivalued`
+    # TODO add descriptions for `dynamic_script`
 
     metadata: Optional[dict] = Field(
         default=None,
-        description="""""",
+        description="""
+        General metadata written in a dictionary format. This is used to store additional information
+        about the property type, e.g., `{'unit': 'm', 'precision': 2}`.
+        """,
     )
 
     dynamic_script: Optional[str] = Field(
-        default=None,
-        description="""""",
-    )
-
-    multivalued: Optional[str] = Field(
         default=None,
         description="""""",
     )

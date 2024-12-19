@@ -172,3 +172,6 @@ cython_debug/
 # pytest coverage
 pytest.xml
 pytest-coverage.txt
+
+# artifacts
+artifacts

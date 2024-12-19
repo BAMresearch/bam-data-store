@@ -50,6 +50,24 @@
               "${workspaceFolder}/tests/"  // path to your testing module
           ]
       },
+      {
+        "name": "bds export-to-json",
+        "type": "debugpy",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/.venv/bin/bam_masterdata",
+        "justMyCode": false,
+        "args": ["export-entities-to-json"]
+      },
+      {
+        "name": "bds export-to-excel",
+        "type": "debugpy",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/.venv/bin/bam_masterdata",
+        "justMyCode": false,
+        "args": ["export-entities-to-excel"]
+      },
     ]
   },
 }

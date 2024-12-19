@@ -25,6 +25,29 @@ def entities_to_excel(
     """
     def_members = inspect.getmembers(definitions_module, inspect.isclass)
     module = import_module(module_path=module_path)
+
+    # Special case of `PropertyTypeDef` in `property_types.py`
+    if 'property_types.py' in module_path:
+        for name, obj in inspect.getmembers(module):
+            if name.startswith('_') or name == 'PropertyTypeDef':
+                continue
+
+            # Entity title
+            worksheet.append([obj.excel_name])
+
+            # Entity header definitions and values
+            worksheet.append(obj.excel_headers)
+            row = []
+            for f_set in obj.model_fields.keys():
+                if f_set == 'data_type':
+                    val = obj.data_type.value
+                else:
+                    val = getattr(obj, f_set)
+                row.append(val)
+            worksheet.append(row)
+        return None
+
+    # All other datamodel modules
     for _, obj in inspect.getmembers(module, inspect.isclass):
         # Ensure the class has the `to_json` method
         if not hasattr(obj, 'defs') or not callable(getattr(obj, 'to_json')):
